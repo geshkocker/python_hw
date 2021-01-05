@@ -89,7 +89,7 @@ class Ball():
             
         
     def render(self):
-        pygame.draw.rect(screen, WHITE, pygame.Rect(int(self.x-self.width/2.0), int(self.y-self.height/2.0), self.width, self.height)) 
+        pygame.draw.rect(screen, RED, pygame.Rect(int(self.x-self.width/2.0), int(self.y-self.height/2.0), self.width, self.height)) 
 
     def is_aabb_collision(self, other):
         x_collision = (math.fabs(self.x - other.x) * 2) < (self.width + other.width)
@@ -102,13 +102,13 @@ class Brick():
         self.y = y
         self.width = 45
         self.height = 22
-        self.color = random.choice([WHITE, GREEN, RED, BLUE])
+        self.color = random.choice([YELLOW, GREEN, BLUE, PINK])
         
     def render(self):
         pygame.draw.rect(screen, self.color, pygame.Rect(int(self.x-self.width/2.0), int(self.y-self.height/2.0), self.width, self.height)) 
 
 
-font = pygame.font.SysFont("comicsansms", 48)
+font = pygame.font.SysFont("impact", 48)
 
 
 hit_sound = pygame.mixer.Sound("hit.wav") #r"F:\.vscode\python_course\project\hit.wav"
@@ -167,7 +167,7 @@ while True:
     for brick in bricks:
         brick.render()
      
-    score_surface = font.render(f"Score: {paddle.score}", True, RED)
+    score_surface = font.render(f"Score: {paddle.score}", True, WHITE)
     screen.blit(score_surface, (WIDTH/2.0 - 75, 10))
 
     pygame.display.flip()
