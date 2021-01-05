@@ -168,7 +168,7 @@ while True:
         brick.render()
      
     score_surface = font.render(f"Score: {paddle.score}", True, WHITE)
-    screen.blit(score_surface, (WIDTH/2.0 - 75, 10))
+    screen.blit(score_surface, (WIDTH/2.0 - 590, 10))
 
     pygame.display.flip()
     
