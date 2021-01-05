@@ -91,7 +91,7 @@ class Ball():
     def render(self):
         pygame.draw.rect(screen, RED, pygame.Rect(int(self.x-self.width/2.0), int(self.y-self.height/2.0), self.width, self.height)) 
 
-    def is_aabb_collision(self, other):
+    def is_aabb_collision(self, other): #axis aligned bounding box
         x_collision = (math.fabs(self.x - other.x) * 2) < (self.width + other.width)
         y_collision = (math.fabs(self.y - other.y) * 2) < (self.height + other.height)
         return (x_collision and y_collision)
