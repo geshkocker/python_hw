@@ -122,7 +122,7 @@ for y in range(100, 375, 25):
     color = random.choice([YELLOW, GREEN, BLUE, PINK])
     for x in range(25, 1200, 50):
         bricks.append(Brick(x, y))
-        bricks[-1].color = color
+        #bricks[-1].color = color  - use # to random spawn of the bricks
 
 
 while True:
