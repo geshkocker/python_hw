@@ -60,7 +60,7 @@ class Paddle():
 class Ball():
     def __init__(self):
         self.x = WIDTH/2.0
-        self.y = HEIGHT/2.0
+        self.y = 600
         self.dx = 6
         self.dy = -6
         self.width = 15
